@@ -15,7 +15,6 @@ if rcon.login(PASSWORD):
 
     response = rcon.command("list")
     rcon.command("say hi")
-    rcon.command("op wgdcwd")
 
     # 결과 출력
     print("서버 응답:", response)
