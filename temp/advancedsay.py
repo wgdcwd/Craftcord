@@ -42,7 +42,7 @@ async def on_message(message):
     if message.content[0] == "!" :
         minecraft_command = message.content[1:]
     else :
-        minecraft_command = f'tellraw @p "<wgdcwd> {message.content}"'
+        minecraft_command = f'tellraw @p "{message.author.display_name} {message.content}"'
 
     response = execute_minecraft_command(minecraft_command)
     await message.channel.send(f'Minecraft 서버에 명령을 전송했습니다. 응답: {response}')
