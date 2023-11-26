@@ -1,6 +1,6 @@
 from mctools import RCONClient  # Import the RCONClient
 
-HOST = 'wgdcwd.k'  # Hostname of the Minecraft server
+HOST = 'localhost'  # Hostname of the Minecraft server
 PORT = 25575    # Port number of the RCON server
 PASSWORD = "1234"
 # Create the RCONClient:

@@ -1,13 +1,16 @@
 import discord
 from mctools import RCONClient
+from pritemp import Private
+
+private = Private()
 
 intents = discord.Intents.default()
 intents.message_content = True
 
 client = discord.Client(intents=intents)
-server_address = "your_minecraft_server_address"
+server_address = "localhost"
 rcon_port = 25575  # RCON 포트 (기본값은 25575)
-rcon_password = "your_rcon_password"
+rcon_password = "1234"
 
 @client.event
 async def on_ready():
@@ -33,4 +36,4 @@ def execute_minecraft_command(command):
         return f"Error executing command: {e}"
 
 # 봇을 실행합니다.
-client.run('YOUR_BOT_TOKEN')
+client.run(private.bot_token)
