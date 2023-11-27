@@ -10,5 +10,3 @@ class Private:
             self.rcon_password = lines[3].strip().split('=')[1]
             self.bot_token = lines[4].strip().split('=')[1]
 
-a=Private()
-print(a.__dict__)

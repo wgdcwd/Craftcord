@@ -5,8 +5,8 @@ class Private:
 
             # 변수에 값 저장
             self.server_address = lines[0].strip().split('=')[1]
-            self.bot_token = lines[1].strip().split('=')[1]
-            self.channel_id = int(lines[2].strip().split('=')[1])  # channel_id를 정수로 변환
-
-    
+            self.server_port = lines[1].strip().split('=')[1]
+            self.rcon_port = lines[2].strip().split('=')[1]
+            self.rcon_password = lines[3].strip().split('=')[1]
+            self.bot_token = lines[4].strip().split('=')[1]
 
