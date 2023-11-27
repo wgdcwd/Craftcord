@@ -9,4 +9,7 @@ class Private:
             self.rcon_port = lines[2].strip().split('=')[1]
             self.rcon_password = lines[3].strip().split('=')[1]
             self.bot_token = lines[4].strip().split('=')[1]
+            self.channel_id = lines[5].strip().split('=')[1]
 
+if __name__=="__main__":
+    print("im main")
