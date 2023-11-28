@@ -4,7 +4,6 @@ from mctools import RCONClient
 from private import Private
 
 private = Private()
-
 #마인크래프트 rcon 객체 생성
 rcon_client = RCONClient("localhost", 25575)
 rcon_client.login("1234")
@@ -35,11 +34,13 @@ async def on_message(message):
     if message.author == client.user:
         return
     
+    print(message.content)
     if message.content[0] == "!" :
         minecraft_command = message.content[1:]
     else :
         minecraft_command = f'tellraw @a "{message.author.display_name} {message.content}"'
     response = execute_minecraft_command(minecraft_command)
+    print(response)
     if response == False :
         await message.channel.send("error discord to minecraft")
 
@@ -67,7 +68,7 @@ async def follow_minecraft_chat():
 # Discord 봇 실행과 minecraft 서버 로그 읽기를 병렬로 실행
 async def main():
     await asyncio.gather(
-        client.start('MTE3NDc4MjUzODU3Nzg3NDk0NA.Gdr4Rb.bs68UUcN5Xm3SYun0vGCvUIqH-n7dCpzVYzeCY'),
+        client.start(private.bot_token),
         follow_minecraft_chat()
     )
 
