@@ -1,15 +1,30 @@
+import os
 class Private:
     def __init__(self):
+        self.vars =  {}
+        
         with open('private.txt', 'r') as file:
             lines = file.readlines()
+            for line in lines :
+                key, value = map(str.strip, line.split('='))
+                self.vars[key] = value
+    
+    def print_settings(self) :
+        for key, value in self.vars.items() :
+            print(f"{key}={value}")
 
-            # 변수에 값 저장
-            self.server_address = lines[0].strip().split('=')[1]
-            self.server_port = lines[1].strip().split('=')[1]
-            self.rcon_port = lines[2].strip().split('=')[1]
-            self.rcon_password = lines[3].strip().split('=')[1]
-            self.bot_token = lines[4].strip().split('=')[1]
-            self.channel_id = lines[5].strip().split('=')[1]
+    def change_settings(self) :
+        with open("private.txt", "w") as file:
+            for key, value in self.vars.items() :
+                file.write(f"{key}={value}\n")
 
-if __name__=="__main__":
-    print("im main")
+    def set_private_default(self) :
+        self.vars["bot_token"] = "None"
+        self.vars["channel_id"] = "None"
+        self.vars["server_address"] = "localhost"
+        self.vars["server_port"] = "25565"
+        self.vars["rcon_port"] = "25575"
+        self.vars["rcon_password"] = "1234"
+
+        self.change_settings()
+        
