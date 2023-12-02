@@ -17,4 +17,4 @@ async def on_ready():
     print(f'We have logged in as {client.user}')
     await get_user_input()
 
-client.run("MTE3NDc4MjUzODU3Nzg3NDk0NA.G0U0u7.rSM1lIeDxlfwdZHeZQRvjyb9eGRalscJYSHswQ")
+client.run("")

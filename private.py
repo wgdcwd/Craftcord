@@ -8,6 +8,7 @@ class Private:
             for line in lines :
                 key, value = map(str.strip, line.split('='))
                 self.vars[key] = value
+            
     
     def print_settings(self) :
         for key, value in self.vars.items() :
