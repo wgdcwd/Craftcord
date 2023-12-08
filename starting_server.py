@@ -1,5 +1,6 @@
+#서버실행시 실행되는 코드.
 import os
-import subprocess
+import create_bat
 from private import Private
 
 def check_eula():
@@ -49,11 +50,12 @@ def set_properties() :
 
 if __name__ == "__main__":
     i = check_eula()
-    set_properties()
-
 
     if i == 0 : # eula=true
+        create_bat.create(True)
+        set_properties()
         exit(0)
        
     else :
+        create_bat.create(False)
         exit(1)

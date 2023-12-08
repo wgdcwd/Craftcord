@@ -1,3 +1,4 @@
+#마인크래프트, 디스코드에서 입력된 메세지들을 알맞게 가공하는 코드
 import re
 def convert_minecraft_msg(msg) :
     # 로그 형식에 맞게 정규표현식을 사용하여 각 부분을 추출

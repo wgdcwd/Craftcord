@@ -1,3 +1,4 @@
+#서버설정시 실행되는 코드.
 import os
 from private import Private
 
