@@ -2,12 +2,14 @@ import os
 class Private:
     def __init__(self):
         self.vars =  {}
-        
-        with open('private.txt', 'r') as file:
-            lines = file.readlines()
-            for line in lines :
-                key, value = map(str.strip, line.split('='))
-                self.vars[key] = value
+        try :
+            with open('private.txt', 'r') as file:
+                lines = file.readlines()
+                for line in lines :
+                    key, value = map(str.strip, line.split('='))
+                    self.vars[key] = value
+        except :
+            self.set_private_default()
             
     
     def print_settings(self) :

@@ -23,8 +23,10 @@ def check_eula():
         return 2
     
 def change_server_property(property_name, new_value):
+    if not os.path.exists("..\\server.properties"):
+        exit(1)
     # 파일을 읽기 모드로 열기
-    with open("../server.properties", 'r') as file:
+    with open("..\\server.properties", 'r') as file:
         lines = file.readlines()
 
     # 속성 찾기 및 변경
@@ -34,7 +36,7 @@ def change_server_property(property_name, new_value):
             break
 
     # 파일을 쓰기 모드로 열어 변경된 내용 쓰기
-    with open("../server.properties", 'w') as file:
+    with open("..\\server.properties", 'w') as file:
         file.writelines(lines)
 
 def set_properties() :

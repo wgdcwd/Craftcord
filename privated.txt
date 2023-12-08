@@ -1,0 +1,6 @@
+bot_token=MTE3NDc4MjUzODU3Nzg3NDk0NA.Gsl1NL.aTJdpMP2eq75VUzG_9okDusCLgnm7kYDjjU0pw
+channel_id=1178436506130595850
+server_address=localhost
+server_port=25565
+rcon_port=25575
+rcon_password=1234
