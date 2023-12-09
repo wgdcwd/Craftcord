@@ -43,9 +43,9 @@ craftcord는 마인크래프트 서버와 디스코드 간의 채팅 및 명령�
 
 ## 레퍼런스
 
+- [그저 goat. chat GPT](https://chat.openai.com/)
 - [discord.py](https://discordpy.readthedocs.io/en/stable/)
 - [유튜브 나만의 똑똑한 디스코드 봇 만들기](https://www.youtube.com/watch?v=3557uEMPql0&t=95s)
 - [mctools](https://pypi.org/project/mctools/)
-- [그저 goat. chat GPT](https://chat.openai.com/)
 - [코딩도장 asyncio 사용하기](https://dojang.io/mod/page/view.php?id=2469)
 - [위키독스 점프 투 파이썬 정규표현식 시작하기](https://wikidocs.net/4308)
