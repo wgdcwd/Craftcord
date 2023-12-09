@@ -5,7 +5,6 @@ import time
 from mctools import RCONClient
 from private import Private
 import msg_converter
-import re
 
 private = Private()
 #마인크래프트 rcon 객체 생성
