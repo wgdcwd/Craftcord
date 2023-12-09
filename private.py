@@ -1,4 +1,3 @@
-import os
 class Private:
     def __init__(self):
         self.vars =  {}
