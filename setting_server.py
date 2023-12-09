@@ -3,7 +3,7 @@ import os
 from private import Private
 
 
-def auto_setting() :
+def auto_setting() : # 1. 서버자동설정
     private = Private()
     
     private.vars["bot_token"] = input("디스코드 봇 토큰을 입력하세요 : ")
@@ -39,7 +39,7 @@ def auto_setting() :
     os.system("pause")
     
 
-def individual_setting() :
+def individual_setting() : # 2. 서버수동설정
     private = Private()
     while True :
         private.change_settings()

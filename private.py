@@ -1,3 +1,4 @@
+#개인설정들을 관리하고 저장하는 클래스. private.txt를 생성, 관리
 class Private:
     def __init__(self):
         self.vars =  {}
