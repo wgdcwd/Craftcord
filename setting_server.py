@@ -3,7 +3,7 @@ import os
 from private import Private
 
 
-def group_setting() :
+def auto_setting() :
     private = Private()
     
     private.vars["bot_token"] = input("디스코드 봇 토큰을 입력하세요 : ")
@@ -84,7 +84,7 @@ while True :
     os.system("cls")
 
     if n == "1" :
-        group_setting()
+        auto_setting()
     elif n == "2" :
         individual_setting()
     elif n == "3" :

@@ -3,7 +3,7 @@ import os
 import create_bat
 from private import Private
 
-def check_eula():
+def check_eula(): #eula.txt를 검사하는 함수. eula=true면 0 false나 txt가 존재하지않으면 1,2리턴.
     # eula.txt 파일 경로
     eula_path = "..\\eula.txt"
     
@@ -23,7 +23,7 @@ def check_eula():
     else:
         return 2
     
-def change_server_property(property_name, new_value):
+def change_server_property(property_name, new_value): #server.properties의 원하는 값들을 수정하는 함수.
     if not os.path.exists("..\\server.properties"):
         exit(1)
     # 파일을 읽기 모드로 열기
@@ -40,7 +40,7 @@ def change_server_property(property_name, new_value):
     with open("..\\server.properties", 'w') as file:
         file.writelines(lines)
 
-def set_properties() :
+def set_properties() : # 프로그램이 정상작동되기 위해 server.properties에서 특정 값들을 수정하는 함수.
     private = Private()
     change_server_property("server-port",private.vars["server_port"])
     change_server_property("rcon.port",private.vars["rcon_port"])
@@ -56,6 +56,6 @@ if __name__ == "__main__":
         set_properties()
         exit(0)
        
-    else :
+    else : # eula=false거나 eula.txt가 존재하지 않을경우
         create_bat.create(False)
         exit(1)

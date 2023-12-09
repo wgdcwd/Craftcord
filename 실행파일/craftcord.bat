@@ -32,28 +32,31 @@ python starting_server.py
 set python_exit_code=%errorlevel%
 cd ..
 if %python_exit_code% equ 0 (
+    cd craftcord
     call start.bat
     cls
     echo 서버가 종료되었습니다.
+    cd ..
     pause
 ) else (
+    cd craftcord
     call start.bat
     cls
     echo eula.txt에서 eula=false를 eula=true로 바꿔주세요.
+    cd ..
     pause
 )
 goto mainMenu
 
 :serverSettings
-echo 서버 설정을 합니다.
 cd craftcord
 python setting_server.py
-pause
 cd ..
 goto mainMenu
 
 :showHelp
-echo 도움말을 표시합니다.
+echo README.md를 읽어주세요!
+start "" "https://github.com/wgdcwd/craftcord"
 rem 도움말 표시에 필요한 코드 추가
 pause
 goto mainMenu
