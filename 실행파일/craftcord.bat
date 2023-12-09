@@ -57,6 +57,5 @@ goto mainMenu
 :showHelp
 echo README.md를 읽어주세요!
 start "" "https://github.com/wgdcwd/craftcord"
-rem 도움말 표시에 필요한 코드 추가
 pause
 goto mainMenu
