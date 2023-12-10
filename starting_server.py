@@ -3,7 +3,7 @@ import os
 import create_bat
 from private import Private
 
-def check_eula(): #eula.txt를 검사하는 함수. eula=true면 0 false나 txt가 존재하지않으면 1,2리턴.
+def check_eula(): #eula.txt를 검사하는 함수. eula=true면 0 false나 txt가 존재하지않으면 1,2리턴.(0이 리턴되지 않으면 서버실행시 파이썬스크립트 실행X)
     # eula.txt 파일 경로
     eula_path = "..\\eula.txt"
     
